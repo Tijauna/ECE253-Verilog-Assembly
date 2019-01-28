@@ -1,0 +1,37 @@
+module part3(SW, KEY, HEX0, HEX1);
+
+input[0:0] KEY;
+input[1:0] SW;
+
+output[0:6] HEX0, HEX1;
+
+wire [7:0]Q; 
+wire enable, clear;
+assign enable = SW[1];
+assign clear = SW[0];
+
+
+tflipflop(KEY[0], 
+
+
+module tflipflop (clock, enable, clear, Q);
+
+
+
+endmodule
+
+
+
+
+
+module hex7seg (output [0:6] hexdisplay, input [3:0] s);
+	
+	assign hexdisplay[0]=(~s[3]&~s[2]&~s[1]& s[0]) | (~s[3]& s[2]&~s[1]&~s[0]) | ( s[3]&~s[2]& s[1]& s[0]) | ( s[3]& s[2]&~s[1]& s[0]);
+	assign hexdisplay[1]=(~s[3]& s[2]&~s[1]& s[0]) | (~s[3]& s[2]& s[1]&~s[0]) | ( s[3]&~s[2]& s[1]& s[0]) | ( s[3]& s[2]&~s[1]&~s[0]) | ( s[3]& s[2]& s[1]);
+	assign hexdisplay[2]=(~s[3]&~s[2]& s[1]&~s[0]) | ( s[3]& s[2]&~s[1]&~s[0]) | ( s[3]& s[2]& s[1]);
+	assign hexdisplay[3]=(~s[3]&~s[2]&~s[1]& s[0]) | (~s[3]& s[2]&~s[1]&~s[0]) | (~s[3]& s[2]& s[1]& s[0]) | ( s[3]&~s[2]& s[1]&~s[0]) | ( s[3]& s[2]& s[1]& s[0]);
+	assign hexdisplay[4]=(~s[3]&~s[2]&~s[1]& s[0]) | (~s[3]&~s[2]& s[1]& s[0]) | (~s[3]& s[2]&~s[1]&~s[0]) | ( s[3]&~s[2]&~s[1]& s[0]) | (~s[3]& s[2]& s[0]);
+	assign hexdisplay[5]=(~s[3]&~s[2]&~s[1]& s[0]) | (~s[3]& s[2]& s[1]& s[0]) | ( s[3]& s[2]&~s[1]& s[0]) | (~s[3]&~s[2]& s[1]);
+	assign hexdisplay[6]=(~s[3]& s[2]& s[1]& s[0]) | ( s[3]& s[2]&~s[1]&~s[0]) | (~s[3]&~s[2]&~s[1]);
+
+endmodule	

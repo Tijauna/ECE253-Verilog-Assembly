@@ -1,0 +1,29 @@
+# Reading C:/altera_lite/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab2-3_Part5_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4d Lib Mapping Utility 2015.12 Dec 30 2015
+# vmap work rtl_work 
+# Copying C:/altera_lite/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/smart/Documents/Engsci\ Year\ 2/F\ -\ ECE253/Labs/Daniel\ Labs/Lab\ 2-3\ Part\ 5 {C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 2-3 Part 5/Lab2-3_Part5.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 09:22:30 on Oct 02,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 2-3 Part 5" C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 2-3 Part 5/Lab2-3_Part5.v 
+# -- Compiling module part5
+# -- Compiling module mux_2bit_3to1
+# ** Error: C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 2-3 Part 5/Lab2-3_Part5.v(37): (vlog-2730) Undefined variable: 'Mss'.
+# 
+# ** Error: C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 2-3 Part 5/Lab2-3_Part5.v(37): Identifier must be declared with a port mode: Mss.
+# -- Compiling module char_7seg
+# End time: 09:22:31 on Oct 02,2018, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# ** Error: C:/altera_lite/16.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./Lab2-3_Part5_run_msim_rtl_verilog.do line 8
+# C:/altera_lite/16.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+C:/Users/smart/Documents/Engsci\ Year\ 2/F\ -\ ECE253/Labs/Daniel\ Labs/Lab\ 2-3\ Part\ 5 {C:/Users/smart/Docume..."

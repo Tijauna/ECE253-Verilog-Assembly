@@ -1,0 +1,22 @@
+module part1 (SW, LEDR, KEY);
+
+
+endmodule 
+
+
+
+module flipflop (clock, en, clc, output1);
+
+	input clock, en, clc;
+	output reg [0:15] output1;
+
+	always @(posedge clock)
+		//if clear is 0, clear all
+		if(~clc)
+			output1 <= 0;
+		
+		//if enable = 1, add 1 
+		else if(en)
+			output1 <= output1 + 1;
+
+endmodule

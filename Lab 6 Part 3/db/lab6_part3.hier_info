@@ -1,0 +1,121 @@
+|part3
+CLOCK_50 => CLOCK_50.IN1
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+KEY[0] => KEY[0].IN4
+KEY[1] => KEY[1].IN1
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+LEDR[0] <= fsm:f4.port4
+
+
+|part3|half_sec_counter:f0
+Clock => f~reg0.CLK
+Clock => z[0].CLK
+f <= f~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ResetN => z[0].ACLR
+ResetN => f~reg0.ENA
+
+
+|part3|convert3to4:f1
+S[0] => Equal0.IN2
+S[0] => Equal1.IN0
+S[0] => Equal2.IN2
+S[0] => Equal3.IN1
+S[0] => Equal4.IN2
+S[0] => Equal5.IN1
+S[0] => Equal6.IN2
+S[0] => Equal7.IN2
+S[1] => Equal0.IN1
+S[1] => Equal1.IN2
+S[1] => Equal2.IN0
+S[1] => Equal3.IN0
+S[1] => Equal4.IN1
+S[1] => Equal5.IN2
+S[1] => Equal6.IN1
+S[1] => Equal7.IN1
+S[2] => Equal0.IN0
+S[2] => Equal1.IN1
+S[2] => Equal2.IN1
+S[2] => Equal3.IN2
+S[2] => Equal4.IN0
+S[2] => Equal5.IN0
+S[2] => Equal6.IN0
+S[2] => Equal7.IN0
+D[3] <= D[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= D[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= D[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+D[0] <= <GND>
+
+
+|part3|shiftregister:f2
+D[3] => Q.DATAB
+D[2] => ~NO_FANOUT~
+D[1] => ~NO_FANOUT~
+D[0] => ~NO_FANOUT~
+L => Q.OUTPUTSELECT
+Clock => Q[3].CLK
+bit0 <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+K => ~NO_FANOUT~
+
+
+|part3|lengthcounter:f3
+S[0] => Equal0.IN2
+S[0] => Equal1.IN0
+S[0] => Equal2.IN2
+S[0] => Equal3.IN1
+S[0] => Equal4.IN2
+S[0] => Equal5.IN1
+S[0] => Equal6.IN2
+S[0] => Equal7.IN2
+S[1] => Equal0.IN1
+S[1] => Equal1.IN2
+S[1] => Equal2.IN0
+S[1] => Equal3.IN0
+S[1] => Equal4.IN1
+S[1] => Equal5.IN2
+S[1] => Equal6.IN1
+S[1] => Equal7.IN1
+S[2] => Equal0.IN0
+S[2] => Equal1.IN1
+S[2] => Equal2.IN1
+S[2] => Equal3.IN2
+S[2] => Equal4.IN0
+S[2] => Equal5.IN0
+S[2] => Equal6.IN0
+S[2] => Equal7.IN0
+Enable => always1.IN0
+Ln => always1.IN1
+Clock => Q[0].CLK
+Clock => Q[1].CLK
+Clock => Q[2].CLK
+z <= Equal8.DB_MAX_OUTPUT_PORT_TYPE
+ResetN => Q[0].ACLR
+ResetN => Q[1].ACLR
+ResetN => Q[2].ACLR
+
+
+|part3|fsm:f4
+K[0] => y~3.DATAIN
+K[1] => Y.A.DATAB
+K[1] => Y.B.DATAB
+z => Y.OUTPUTSELECT
+z => Y.OUTPUTSELECT
+z => Selector2.IN3
+z => Selector2.IN4
+bit0 => Y.DATAA
+bit0 => Y.DATAA
+half_second => y~1.DATAIN
+LEDR[0] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+Enable <= Enable.DB_MAX_OUTPUT_PORT_TYPE
+Ln <= Ln.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 6 Part 3/simulation/qsim
+vlab6_3
+Z1 !s110 1540259421
+!i10b 1
+!s100 jCFVf=Y24Bggb48Pfc0e[1
+I>Vh:af3M8_1R;;NzN9fLK1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1540259419
+Z3 8lab6_part3.vo
+Z4 Flab6_part3.vo
+Z5 L0 32
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1540259421.000000
+Z8 !s107 lab6_part3.vo|
+Z9 !s90 -work|work|lab6_part3.vo|
+!i113 1
+Z10 o-work work
+vlab6_3_vlg_vec_tst
+R1
+!i10b 1
+!s100 FhFGEZiaTW77]X8BNOPP>0
+IliiGgnfVWJFacVM7GO^o?3
+R2
+R0
+w1540259418
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+vpart3
+Z12 !s110 1540304108
+!i10b 1
+!s100 f95QP0Y?LTPDZz3OckGj60
+In[jNZDI>AcNZJ2;Pk[X7L1
+R2
+R0
+w1540304106
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z13 !s108 1540304108.000000
+R8
+R9
+!i113 1
+R10
+vpart3_vlg_vec_tst
+R12
+!i10b 1
+!s100 oXk6Z3S6PiB]1I;7;K?OB0
+Io9QMH3N=5fkDdNP]hH<[V0
+R2
+R0
+w1540304105
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R13
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R10

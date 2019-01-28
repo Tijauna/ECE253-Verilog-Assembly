@@ -1,0 +1,156 @@
+|part3
+SW[0] => clear.IN8
+SW[1] => enable.IN1
+KEY[0] => KEY[0].IN8
+HEX0[6] <= hex7seg:comb_33.port0
+HEX0[5] <= hex7seg:comb_33.port0
+HEX0[4] <= hex7seg:comb_33.port0
+HEX0[3] <= hex7seg:comb_33.port0
+HEX0[2] <= hex7seg:comb_33.port0
+HEX0[1] <= hex7seg:comb_33.port0
+HEX0[0] <= hex7seg:comb_33.port0
+HEX1[6] <= hex7seg:comb_34.port0
+HEX1[5] <= hex7seg:comb_34.port0
+HEX1[4] <= hex7seg:comb_34.port0
+HEX1[3] <= hex7seg:comb_34.port0
+HEX1[2] <= hex7seg:comb_34.port0
+HEX1[1] <= hex7seg:comb_34.port0
+HEX1[0] <= hex7seg:comb_34.port0
+
+
+|part3|tflipflop:t0
+clock => output1~reg0.CLK
+en => output1.OUTPUTSELECT
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|tflipflop:t1
+clock => output1~reg0.CLK
+en => output1.OUTPUTSELECT
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|tflipflop:t2
+clock => output1~reg0.CLK
+en => output1.OUTPUTSELECT
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|tflipflop:t3
+clock => output1~reg0.CLK
+en => output1.OUTPUTSELECT
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|tflipflop:t4
+clock => output1~reg0.CLK
+en => output1.OUTPUTSELECT
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|tflipflop:t5
+clock => output1~reg0.CLK
+en => output1.OUTPUTSELECT
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|tflipflop:t6
+clock => output1~reg0.CLK
+en => output1.OUTPUTSELECT
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|tflipflop:t7
+clock => output1~reg0.CLK
+en => output1.OUTPUTSELECT
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part3|hex7seg:comb_33
+hex[6] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[0] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[2] => hex.IN0
+s[2] => hex.IN0
+s[2] => hex.IN0
+s[2] => hex.IN0
+s[3] => hex.IN1
+s[3] => hex.IN1
+s[3] => hex.IN1
+s[3] => hex.IN1
+
+
+|part3|hex7seg:comb_34
+hex[6] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[0] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[2] => hex.IN0
+s[2] => hex.IN0
+s[2] => hex.IN0
+s[2] => hex.IN0
+s[3] => hex.IN1
+s[3] => hex.IN1
+s[3] => hex.IN1
+s[3] => hex.IN1
+
+

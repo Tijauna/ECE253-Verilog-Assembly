@@ -1,0 +1,12 @@
+
+State Machine - |part2|ps
+Name ps.H ps.G ps.F ps.E ps.D ps.C ps.B ps.A ps.I 
+ps.A 0 0 0 0 0 0 0 0 0 
+ps.B 0 0 0 0 0 0 1 1 0 
+ps.C 0 0 0 0 0 1 0 1 0 
+ps.D 0 0 0 0 1 0 0 1 0 
+ps.E 0 0 0 1 0 0 0 1 0 
+ps.F 0 0 1 0 0 0 0 1 0 
+ps.G 0 1 0 0 0 0 0 1 0 
+ps.H 1 0 0 0 0 0 0 1 0 
+ps.I 0 0 0 0 0 0 0 1 1 

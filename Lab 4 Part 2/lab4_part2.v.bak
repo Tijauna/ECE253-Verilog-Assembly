@@ -1,0 +1,4 @@
+module part2 (SW, HEX0, HEX1);
+	input [3:0] SW;
+	output [0:6] HEX0; // 7-seg display
+	output [0:6] HEX1;

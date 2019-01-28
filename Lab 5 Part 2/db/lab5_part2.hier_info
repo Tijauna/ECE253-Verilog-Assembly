@@ -1,0 +1,459 @@
+|part2
+SW[0] => SW[0].IN3
+SW[1] => SW[1].IN3
+SW[2] => SW[2].IN3
+SW[3] => SW[3].IN3
+SW[4] => SW[4].IN3
+SW[5] => SW[5].IN3
+SW[6] => SW[6].IN3
+SW[7] => SW[7].IN3
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+HEX0[6] <= hex7seg:B0.port1
+HEX0[5] <= hex7seg:B0.port1
+HEX0[4] <= hex7seg:B0.port1
+HEX0[3] <= hex7seg:B0.port1
+HEX0[2] <= hex7seg:B0.port1
+HEX0[1] <= hex7seg:B0.port1
+HEX0[0] <= hex7seg:B0.port1
+HEX1[6] <= hex7seg:B1.port1
+HEX1[5] <= hex7seg:B1.port1
+HEX1[4] <= hex7seg:B1.port1
+HEX1[3] <= hex7seg:B1.port1
+HEX1[2] <= hex7seg:B1.port1
+HEX1[1] <= hex7seg:B1.port1
+HEX1[0] <= hex7seg:B1.port1
+HEX2[6] <= hex7seg:A0.port1
+HEX2[5] <= hex7seg:A0.port1
+HEX2[4] <= hex7seg:A0.port1
+HEX2[3] <= hex7seg:A0.port1
+HEX2[2] <= hex7seg:A0.port1
+HEX2[1] <= hex7seg:A0.port1
+HEX2[0] <= hex7seg:A0.port1
+HEX3[6] <= hex7seg:A1.port1
+HEX3[5] <= hex7seg:A1.port1
+HEX3[4] <= hex7seg:A1.port1
+HEX3[3] <= hex7seg:A1.port1
+HEX3[2] <= hex7seg:A1.port1
+HEX3[1] <= hex7seg:A1.port1
+HEX3[0] <= hex7seg:A1.port1
+HEX4[6] <= hex7seg:sum0.port1
+HEX4[5] <= hex7seg:sum0.port1
+HEX4[4] <= hex7seg:sum0.port1
+HEX4[3] <= hex7seg:sum0.port1
+HEX4[2] <= hex7seg:sum0.port1
+HEX4[1] <= hex7seg:sum0.port1
+HEX4[0] <= hex7seg:sum0.port1
+HEX5[6] <= hex7seg:sum1.port1
+HEX5[5] <= hex7seg:sum1.port1
+HEX5[4] <= hex7seg:sum1.port1
+HEX5[3] <= hex7seg:sum1.port1
+HEX5[2] <= hex7seg:sum1.port1
+HEX5[1] <= hex7seg:sum1.port1
+HEX5[0] <= hex7seg:sum1.port1
+LEDR[0] <= fulladder:a8.port3
+
+
+|part2|register8bit:reg1
+in[0] => output1[0]~reg0.DATAIN
+in[1] => output1[1]~reg0.DATAIN
+in[2] => output1[2]~reg0.DATAIN
+in[3] => output1[3]~reg0.DATAIN
+in[4] => output1[4]~reg0.DATAIN
+in[5] => output1[5]~reg0.DATAIN
+in[6] => output1[6]~reg0.DATAIN
+in[7] => output1[7]~reg0.DATAIN
+reset => output1[0]~reg0.ACLR
+reset => output1[1]~reg0.ACLR
+reset => output1[2]~reg0.ACLR
+reset => output1[3]~reg0.ACLR
+reset => output1[4]~reg0.ACLR
+reset => output1[5]~reg0.ACLR
+reset => output1[6]~reg0.ACLR
+reset => output1[7]~reg0.ACLR
+clock => output1[0]~reg0.CLK
+clock => output1[1]~reg0.CLK
+clock => output1[2]~reg0.CLK
+clock => output1[3]~reg0.CLK
+clock => output1[4]~reg0.CLK
+clock => output1[5]~reg0.CLK
+clock => output1[6]~reg0.CLK
+clock => output1[7]~reg0.CLK
+output1[0] <= output1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output1[1] <= output1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output1[2] <= output1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output1[3] <= output1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output1[4] <= output1[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output1[5] <= output1[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output1[6] <= output1[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+output1[7] <= output1[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|hex7seg:A0
+hexdisplay[6] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[5] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[4] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[3] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[2] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[1] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[0] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+
+
+|part2|hex7seg:A1
+hexdisplay[6] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[5] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[4] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[3] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[2] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[1] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[0] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+
+
+|part2|hex7seg:B0
+hexdisplay[6] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[5] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[4] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[3] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[2] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[1] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[0] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+
+
+|part2|hex7seg:B1
+hexdisplay[6] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[5] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[4] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[3] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[2] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[1] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[0] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+
+
+|part2|fulladder:a1
+a => d.IN0
+b => b.IN1
+ci => ci.IN1
+co => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a1|mux2to1:U0
+a => f.IN0
+b => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a2
+a => d.IN0
+b => b.IN1
+ci => ci.IN1
+co => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a2|mux2to1:U0
+a => f.IN0
+b => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a3
+a => d.IN0
+b => b.IN1
+ci => ci.IN1
+co => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a3|mux2to1:U0
+a => f.IN0
+b => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a4
+a => d.IN0
+b => b.IN1
+ci => ci.IN1
+co => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a4|mux2to1:U0
+a => f.IN0
+b => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a5
+a => d.IN0
+b => b.IN1
+ci => ci.IN1
+co => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a5|mux2to1:U0
+a => f.IN0
+b => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a6
+a => d.IN0
+b => b.IN1
+ci => ci.IN1
+co => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a6|mux2to1:U0
+a => f.IN0
+b => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a7
+a => d.IN0
+b => b.IN1
+ci => ci.IN1
+co => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a7|mux2to1:U0
+a => f.IN0
+b => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a8
+a => d.IN0
+b => b.IN1
+ci => ci.IN1
+co => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|fulladder:a8|mux2to1:U0
+a => f.IN0
+b => f.IN0
+s => f.IN1
+s => f.IN1
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part2|hex7seg:sum0
+hexdisplay[6] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[5] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[4] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[3] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[2] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[1] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[0] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+
+
+|part2|hex7seg:sum1
+hexdisplay[6] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[5] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[4] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[3] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[2] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[1] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+hexdisplay[0] <= hexdisplay.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[0] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[1] => hexdisplay.IN1
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[2] => hexdisplay.IN0
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+s[3] => hexdisplay.IN1
+
+

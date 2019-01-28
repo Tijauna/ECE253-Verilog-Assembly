@@ -1,0 +1,94 @@
+module part5 (CLOCK_50, HEX0);
+
+	input CLOCK_50;
+	output[0:6] HEX0;
+	
+	//given 50 mhz clock, 50 million times a second up/down
+	//thus use 50,000,000, which in binary has 26 bits
+	
+	//counter is the main counter 0 to 50,000,000
+	wire [25:0] counter;
+	wire [3:0]A;
+	
+	//fast_output = final output of fast counter
+	reg fast_output,reset_fast, reset_slow;
+	
+	fast_counter fc(counter, CLOCK_50, reset_fast);
+	
+	//make sure that timer ticks every 1 second, check at every CLOCK_50 posedge
+	always @ (posedge CLOCK_50)
+	begin
+		//check for reaching 50 mil
+		if (counter == 26'd50000000)
+		begin
+			fast_output <= 1;
+			reset_fast <= 0;
+		end 
+		else
+		begin
+			fast_output <= 0;
+			reset_fast <= 1;
+		end 
+		
+		//check if the slow counter has reached 10, then reset 
+		if (A[3] & ~A[2] & A[1] & ~A[0]) 
+			reset_slow <= 0;
+		else
+			reset_slow <= 1;
+	end 
+
+	//send to the slow counter
+	tff t0 (fast_output, CLOCK_50, reset_slow, A[0]);
+	tff t1 (fast_output & A[0], CLOCK_50, reset_slow, A[1]);
+	tff t2 (fast_output & A[0] & A[1], CLOCK_50, reset_slow, A[2]);
+	tff t3 (fast_output & A[0] & A[1] & A[2], CLOCK_50, reset_slow, A[3]);
+	
+	//display on the 7 segment display
+	hex7seg display1 (A,HEX0);
+	
+	
+endmodule 
+	
+	
+module fast_counter (timerfast, clock, resetn);
+	input clock, resetn;
+	output reg [25:0] timerfast;
+
+	//timerfast <= 0;
+	
+	//reset the fast timer (26 bit) if resetn is 0 
+	//else add 1 
+	always @ (posedge clock)
+		if (resetn == 0)
+			timerfast <= 0;
+		else
+			timerfast <= timerfast + 1;
+			
+endmodule 
+
+
+module hex7seg (output [0:6] hex, input [3:0] s);
+	
+	assign hex[0]=(~s[3]&~s[2]&~s[1]& s[0]) | (~s[3]& s[2]&~s[1]&~s[0]) | ( s[3]&~s[2]& s[1]& s[0]) | ( s[3]& s[2]&~s[1]& s[0]);
+	assign hex[1]=(~s[3]& s[2]&~s[1]& s[0]) | (~s[3]& s[2]& s[1]&~s[0]) | ( s[3]&~s[2]& s[1]& s[0]) | ( s[3]& s[2]&~s[1]&~s[0]) | ( s[3]& s[2]& s[1]);
+	assign hex[2]=(~s[3]&~s[2]& s[1]&~s[0]) | ( s[3]& s[2]&~s[1]&~s[0]) | ( s[3]& s[2]& s[1]);
+	assign hex[3]=(~s[3]&~s[2]&~s[1]& s[0]) | (~s[3]& s[2]&~s[1]&~s[0]) | (~s[3]& s[2]& s[1]& s[0]) | ( s[3]&~s[2]& s[1]&~s[0]) | ( s[3]& s[2]& s[1]& s[0]);
+	assign hex[4]=(~s[3]&~s[2]&~s[1]& s[0]) | (~s[3]&~s[2]& s[1]& s[0]) | (~s[3]& s[2]&~s[1]&~s[0]) | ( s[3]&~s[2]&~s[1]& s[0]) | (~s[3]& s[2]& s[0]);
+	assign hex[5]=(~s[3]&~s[2]&~s[1]& s[0]) | (~s[3]& s[2]& s[1]& s[0]) | ( s[3]& s[2]&~s[1]& s[0]) | (~s[3]&~s[2]& s[1]);
+	assign hex[6]=(~s[3]& s[2]& s[1]& s[0]) | ( s[3]& s[2]&~s[1]&~s[0]) | (~s[3]&~s[2]&~s[1]);
+
+endmodule	
+
+
+
+module tff (timer, clock, resetn, q);
+	input timer, clock, resetn;
+	output reg q;
+	
+	always @ (posedge clock)
+		if (resetn == 0)
+			q = 1'b0;
+		else if (timer==1)
+			q <= ~q;
+			
+endmodule

@@ -1,0 +1,96 @@
+.text
+.global _start 
+
+
+	_start: LDR R1, = 0xFF200000  //LEDR Port
+			MOV R2, #0  //condition for left or right movement
+			LDR R3, = 0xFF200040  //SW
+			LDR R4, =0xFF200050  //Keys
+			MOV R6, #0x00000001    //initial pattern + current pattern
+            
+            LDR R8, = 0xFFFEC600 //points to timer
+            LDR R0, = 200000000 //Delay
+            STR R0, [R8] //load value into timer
+            MOV R0, #0b011 //A = 1, E = 1, I = 0
+            STR R0, [R8, #8] //put control into the third line
+		
+            
+	DISPLAY:LDR R10, = 0x1 //Right edge
+    		LDR R9, = 0x200 //Left edge
+            
+            //check to switch directions when hitting edges
+            CMP R6, R10 //hit right, shift left
+            MOVEQ R2, #1 
+            
+			CMP R6, R9 //hit left shift right
+            MOVEQ R2, #0
+
+            CMP R2, #1
+            BEQ PLAY //shift left
+            LSR R6, #1
+            STR R6, [R1] //send to LED
+            B DELAY
+           
+    
+PLAY:	 LSL R6, #1 
+		 STR R6, [R1] //store shifted value into LED
+         B DELAY //call delay
+            
+            
+KEY_CHECK:  LDR R12, [R4]
+			CMP R12, #0 //check to see if keys pressed
+            //if pressed:
+            STRNE R6, [R1]
+            BNE KEY_CHECK_2 //if pressed go to key check 2
+            
+            //if not pressed:
+            MOV PC,LR
+            
+KEY_CHECK_2:  
+    	LDR R12,[R4]
+        CMP R12, #0 //check to see if keys pressed 
+        //if not pressed:
+        STREQ R6, [R1]
+        BEQ KEY_CHECK_3 //start looking for second press
+        
+        //if still pressed
+		B KEY_CHECK_2 //continue looping if still pressed
+        
+KEY_CHECK_3:  LDR R12, [R4]
+			CMP R12, #0 //check to see if keys pressed
+            //if pressed:
+            STRNE R6, [R1]
+            BNE KEY_CHECK_4 //if pressed go to key check 4
+            
+            //if not pressed:
+            B KEY_CHECK_3 //continue looking for press
+            
+KEY_CHECK_4:  
+    	LDR R12,[R4]
+        CMP R12, #0 //check to see if keys pressed 
+        //if not pressed:
+        STREQ R6, [R1]
+        MOVEQ PC, LR //return to delay if second press is lifted
+        
+        //if still pressed
+		B KEY_CHECK_4 //continue looping if still pressed
+	
+
+        
+DELAY:  LDR R0, [R8, #0xC] //R0 = interrupt status register 
+		CMP R0, #0  //check is F = 0?
+                    
+		BEQ DELAY //stay in loop if R0 = 0 
+        
+        BL KEY_CHECK
+        
+		STR R0, [R8, #0xC] //Writing to interrupt status reg clears it
+	
+   
+		B DISPLAY
+
+        
+
+
+
+	

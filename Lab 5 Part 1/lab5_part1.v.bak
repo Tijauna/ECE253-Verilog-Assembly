@@ -1,0 +1,23 @@
+module D_latch (D,clk,Q);
+	input D, clk;
+	output Q;
+	always @(D,clk)
+	begin
+		if (clk == 1'b1)
+			Q = D;
+	end 
+endmodule 
+
+module pos_FF (D, clk, Q);
+	input D,clk;
+	output reg Q;
+	always @(posedge clk)
+		Q<=D;
+endmodule 
+
+module neg_FF (D, clk, Q);
+	input D, clk;
+	output reg Q;
+	always @(negedge clk)
+		Q<=D;
+endmodule 

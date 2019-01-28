@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at lab6_part3.v(135): always construct contains both blocking and non-blocking assignments File: C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 6 Part 3/lab6_part3.v Line: 135
+Info (10281): Verilog HDL Declaration information at lab6_part3.v(155): object "y" differs only in case from object "Y" in the same scope File: C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 6 Part 3/lab6_part3.v Line: 155

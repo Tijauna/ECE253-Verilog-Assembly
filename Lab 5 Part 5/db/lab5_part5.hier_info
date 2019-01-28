@@ -1,0 +1,160 @@
+|part5
+CLOCK_50 => CLOCK_50.IN5
+HEX0[6] <= hex7seg:display1.port1
+HEX0[5] <= hex7seg:display1.port1
+HEX0[4] <= hex7seg:display1.port1
+HEX0[3] <= hex7seg:display1.port1
+HEX0[2] <= hex7seg:display1.port1
+HEX0[1] <= hex7seg:display1.port1
+HEX0[0] <= hex7seg:display1.port1
+
+
+|part5|fastcounter:fc
+timerfast[0] <= timerfast[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[1] <= timerfast[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[2] <= timerfast[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[3] <= timerfast[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[4] <= timerfast[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[5] <= timerfast[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[6] <= timerfast[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[7] <= timerfast[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[8] <= timerfast[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[9] <= timerfast[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[10] <= timerfast[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[11] <= timerfast[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[12] <= timerfast[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[13] <= timerfast[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[14] <= timerfast[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[15] <= timerfast[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[16] <= timerfast[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[17] <= timerfast[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[18] <= timerfast[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[19] <= timerfast[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[20] <= timerfast[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[21] <= timerfast[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[22] <= timerfast[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[23] <= timerfast[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[24] <= timerfast[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+timerfast[25] <= timerfast[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock => timerfast[0]~reg0.CLK
+clock => timerfast[1]~reg0.CLK
+clock => timerfast[2]~reg0.CLK
+clock => timerfast[3]~reg0.CLK
+clock => timerfast[4]~reg0.CLK
+clock => timerfast[5]~reg0.CLK
+clock => timerfast[6]~reg0.CLK
+clock => timerfast[7]~reg0.CLK
+clock => timerfast[8]~reg0.CLK
+clock => timerfast[9]~reg0.CLK
+clock => timerfast[10]~reg0.CLK
+clock => timerfast[11]~reg0.CLK
+clock => timerfast[12]~reg0.CLK
+clock => timerfast[13]~reg0.CLK
+clock => timerfast[14]~reg0.CLK
+clock => timerfast[15]~reg0.CLK
+clock => timerfast[16]~reg0.CLK
+clock => timerfast[17]~reg0.CLK
+clock => timerfast[18]~reg0.CLK
+clock => timerfast[19]~reg0.CLK
+clock => timerfast[20]~reg0.CLK
+clock => timerfast[21]~reg0.CLK
+clock => timerfast[22]~reg0.CLK
+clock => timerfast[23]~reg0.CLK
+clock => timerfast[24]~reg0.CLK
+clock => timerfast[25]~reg0.CLK
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+resetn => timerfast.OUTPUTSELECT
+
+
+|part5|tflipflop:t0
+timer => q.OUTPUTSELECT
+clock => q~reg0.CLK
+resetn => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|tflipflop:t1
+timer => q.OUTPUTSELECT
+clock => q~reg0.CLK
+resetn => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|tflipflop:t2
+timer => q.OUTPUTSELECT
+clock => q~reg0.CLK
+resetn => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|tflipflop:t3
+timer => q.OUTPUTSELECT
+clock => q~reg0.CLK
+resetn => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part5|hex7seg:display1
+hex[6] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[0] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[0] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[1] => hex.IN1
+s[2] => hex.IN0
+s[2] => hex.IN0
+s[2] => hex.IN0
+s[2] => hex.IN0
+s[3] => hex.IN1
+s[3] => hex.IN1
+s[3] => hex.IN1
+s[3] => hex.IN1
+
+

@@ -1,0 +1,95 @@
+|part1
+SW[0] => clear.IN9
+SW[1] => state_next.IN1
+SW[1] => state_next.IN1
+SW[1] => state_next.IN1
+SW[1] => state_next.IN1
+SW[1] => state_next.IN1
+SW[1] => state_next.IN1
+SW[1] => state_next.IN1
+SW[1] => state_next.IN1
+LEDR[0] <= flipflop:f0.port4
+LEDR[1] <= flipflop:f1.port4
+LEDR[2] <= flipflop:f2.port4
+LEDR[3] <= flipflop:f3.port4
+LEDR[4] <= flipflop:f4.port4
+LEDR[5] <= flipflop:f5.port4
+LEDR[6] <= flipflop:f6.port4
+LEDR[7] <= flipflop:f7.port4
+LEDR[8] <= flipflop:f8.port4
+LEDR[9] <= z.DB_MAX_OUTPUT_PORT_TYPE
+KEY[0] => clk.IN9
+
+
+|part1|flipflop:f0
+clock => output1~reg0.CLK
+D => output1.DATAB
+reset_value => output1.DATAA
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|flipflop:f1
+clock => output1~reg0.CLK
+D => output1.DATAB
+reset_value => output1.DATAA
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|flipflop:f2
+clock => output1~reg0.CLK
+D => output1.DATAB
+reset_value => output1.DATAA
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|flipflop:f3
+clock => output1~reg0.CLK
+D => output1.DATAB
+reset_value => output1.DATAA
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|flipflop:f4
+clock => output1~reg0.CLK
+D => output1.DATAB
+reset_value => output1.DATAA
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|flipflop:f5
+clock => output1~reg0.CLK
+D => output1.DATAB
+reset_value => output1.DATAA
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|flipflop:f6
+clock => output1~reg0.CLK
+D => output1.DATAB
+reset_value => output1.DATAA
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|flipflop:f7
+clock => output1~reg0.CLK
+D => output1.DATAB
+reset_value => output1.DATAA
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|part1|flipflop:f8
+clock => output1~reg0.CLK
+D => output1.DATAB
+reset_value => output1.DATAA
+clc => output1.OUTPUTSELECT
+output1 <= output1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

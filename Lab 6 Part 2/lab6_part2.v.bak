@@ -1,0 +1,22 @@
+module part2 (resetn, clock, w, z);
+	input[0:0] KEY;
+	input[1:0] SW;
+	output[9:0] LEDR;
+	
+	
+	parameter A = 9'b000000001;
+	parameter B = 9'b000000010;
+	parameter C = 9'b000000100;
+	parameter D = 9'b000001000;
+	parameter E = 9'b000010000;
+	parameter F = 9'b000100000;
+	parameter G = 9'b001000000;
+	parameter H = 9'b010000000;
+	parameter I = 9'b100000000;
+	
+	reg [1:0] ps;
+	reg [1:0] ns;
+	
+	always @(*)
+		case(ps)
+		

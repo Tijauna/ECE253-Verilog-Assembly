@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 5 Part 1/lab5_part1.v
+source_file = 1, C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 5 Part 1/Waveform.vwf
+source_file = 1, C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 5 Part 1/Waveform1.vwf
+source_file = 1, C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 5 Part 1/db/lab5_part1.cbx.xml
+design_name = part1
+instance = comp, \LEDR[0]~output , LEDR[0]~output, part1, 1
+instance = comp, \LEDR[1]~output , LEDR[1]~output, part1, 1
+instance = comp, \LEDR[2]~output , LEDR[2]~output, part1, 1
+instance = comp, \SW[0]~input , SW[0]~input, part1, 1
+instance = comp, \SW[1]~input , SW[1]~input, part1, 1
+instance = comp, \dtest|Q0 , dtest|Q0, part1, 1
+instance = comp, \posff|Q1 , posff|Q1, part1, 1
+instance = comp, \negff|Q2 , negff|Q2, part1, 1

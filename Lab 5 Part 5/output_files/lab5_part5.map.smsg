@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at lab5_part5.v(19): always construct contains both blocking and non-blocking assignments File: C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 5 Part 5/lab5_part5.v Line: 19
+Warning (10268): Verilog HDL information at lab5_part5.v(86): always construct contains both blocking and non-blocking assignments File: C:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 5 Part 5/lab5_part5.v Line: 86

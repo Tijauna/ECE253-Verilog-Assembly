@@ -1,0 +1,9 @@
+bubblesort(number_array)
+
+		for i in range (0, length of number_array):
+			for j in range (0, length of number_array - i - 1):
+				if number_array[j] < number_array[j+1]:
+					temporary = number_array[j]
+					number_array[j] = number_array[j+1]
+					number_array[j+1] = temporary
+	return number_array

@@ -1,0 +1,35 @@
+module part2 (SW, LEDR);
+	input [9:0] SW;
+	output [9:0] LEDR;
+	wire [3:0] Y;
+	wire [3:0] M;
+	wire [3:0] X;
+	wire s;
+	assign X[0] = SW[0];
+	assign X[1] = SW[1];
+	assign X[2] = SW[2];
+	assign X[3] = SW[3];
+	assign Y[0] = SW[4];
+	assign Y[1] = SW[5];
+	assign Y[2] = SW[6];
+	assign Y[3] = SW[7];
+	
+	assign s = SW[9];
+	assign M[0] = (~s&X[0])|(s&Y[0]);
+	assign M[1] = (~s&X[1])|(s&Y[1]);
+	assign M[2] = (~s&X[2])|(s&Y[2]);
+	assign M[3] = (~s&X[3])|(s&Y[3]);
+	
+	assign LEDR[0]=M[0];
+	assign LEDR[1]=M[1];
+	assign LEDR[2]=M[2];
+	assign LEDR[3]=M[3];
+	
+	assign LEDR[4] = 0;
+	assign LEDR[5] = 0;
+	assign LEDR[6] = 0;
+	assign LEDR[7] = 0;
+	assign LEDR[8] = 0;
+	assign LEDR[9] = s;
+	
+endmodule 

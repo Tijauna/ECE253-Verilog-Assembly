@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/smart/Documents/Engsci Year 2/F - ECE253/Labs/Daniel Labs/Lab 6 Part 1/simulation/qsim
+vpart1
+Z1 !s110 1540250981
+!i10b 1
+!s100 z0P9RH:1]Bk:@4FhJ?Mgb3
+I_D_NZYk0HkAj^SZib3Xk30
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1540250980
+8lab6_part1.vo
+Flab6_part1.vo
+L0 32
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1540250981.000000
+!s107 lab6_part1.vo|
+!s90 -work|work|lab6_part1.vo|
+!i113 1
+Z5 o-work work
+vpart1_vlg_vec_tst
+R1
+!i10b 1
+!s100 SBN`7OXUl;>Rh1PXHV^ii2
+IG1O6AGJ:DT57G?mdB3O0A0
+R2
+R0
+w1540250979
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R5
